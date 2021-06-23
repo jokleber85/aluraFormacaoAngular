@@ -1,13 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { DEFAULT_CURRENCY_CODE, LOCALE_ID, NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
-import { NovaTransferenciaComponent } from './novaTransferencia/novaTransferencia-component';
 import { FormsModule } from '@angular/forms';
-import { ExtratoComponent } from './extrato/extrato-component';
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
 import { HttpClientModule } from '@angular/common/http';
+
+import { ExtratoComponent } from './extrato/extrato-component';
+import { NovaTransferenciaComponent } from './novaTransferencia/novaTransferencia-component';
+import { AppRoutingModule } from './app-routing.module';
 
 registerLocaleData(localePt, 'pt');
 
@@ -20,7 +21,8 @@ registerLocaleData(localePt, 'pt');
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt'},
