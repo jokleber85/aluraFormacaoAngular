@@ -11,6 +11,13 @@ npm install -g @angular
 ```
 </br>
 
+Rodar o projeto deve-se instalar o node_modules:
+```js
+npm install
+ng serve open
+```
+</br>
+
 Criar projeto
 ```js
 ng new "nome do projeto (sem aspas)" --strict // ng new gatitoBook --strict
@@ -57,4 +64,15 @@ Ordem criação e manipulação modulo/componentes:
 * Criar o componente (ng g c lista-animais)
 * Adicionar a rota app-routing-module.ts (import animais module)
 * Adicionar a rota animais-routing.module.ts (import lista-animais component)
-* 
+ 
+Instalar puglin JWT token
+```js
+npm install jwt-decode
+```
+</br>
+
+Atribuir serviço JWT token no projeto
+```js
+ng g s autenticacao/token
+```
+<br>
