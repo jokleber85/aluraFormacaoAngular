@@ -1,0 +1,26 @@
+.menu-bar {
+  background: white;
+  position: fixed;
+  height: 100%;
+  left: -90%;
+  max-width: 320px;
+  margin: 0;
+  padding: 1em;
+  transition: left 0.3s ease-out;
+  top: 0;
+  width: 90%;
+  z-index: 1;
+}
+
+.active-menu .menu-bar {
+  left: 0;
+}
+
+.active-menu .overlay {
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  left: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
