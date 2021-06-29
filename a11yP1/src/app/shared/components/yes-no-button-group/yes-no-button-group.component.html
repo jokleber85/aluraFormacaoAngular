@@ -1,0 +1,51 @@
+<div class="button-group" role="radiogroup" [attr.aria-label]="label">
+    <label>{{ label }}</label>
+    <div class="radio">
+        <input 
+            type="radio"    
+            [attr.id]="id + '-yes'"
+            [attr.name]="id"
+            [attr.checked]="value === options.YES"
+            (change)="activate(options.YES)" />
+        <label class="button button__yes" [attr.for]="id + '-yes'">Yes</label>
+    </div>
+    <div class="radio">
+        <input 
+            type="radio"    
+            [attr.id]="id + '-no'"
+            [attr.name]="id"
+            [attr.checked]="value === options.NO"
+            (change)="activate(options.NO)" />
+        <label class="button button__no" [attr.for]="id + '-no'">No</label>
+    </div>
+</div>
+
+
+<!-- <div class="button-group" role="radiogroup" [attr.aria-labelledby]="id" appKm> [attr.aria-label]="label" 
+    <label class="label" [attr.id]="id">{{ label }}</label>
+    <button 
+        class="button button__yes"
+        role="radio"
+        [attr.aria-checked]="value === options.YES" 
+        [attr.tabindex]="value === options.YES || value === null ? 0 : -1"
+        appKmItem
+        (focused)="activate(options.YES)"
+        type="button" 
+        [class.button-pressed]="value === options.YES"
+        (click)="activate(options.YES)"
+        [attr.disabled]="disabled ? disabled : null"> 
+    Yes 
+    </button>
+    <button 
+        class="button button__no" 
+        role="radio"
+        [attr.aria-checked]="value === options.NO"
+        [attr.tabindex]="value === options.NO ? 0 : -1"
+        appKmItem
+        (focused)="activate(options.NO)"        
+        type="button" 
+        [class.button-pressed]="value === options.NO"
+        (click)="activate(options.NO)"
+        [attr.disabled]="disabled ? disabled : null"> 
+    No </button>
+</div> -->
