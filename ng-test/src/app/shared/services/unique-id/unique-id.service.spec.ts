@@ -17,9 +17,9 @@ describe(UniqueIdService.name, () => {
     should not generate duplicate ids when called multiple times`, () => {
       const ids = new Set();
       for (let i = 0; i < 50; i++){
-        // ids.add(service.generateUniqueIdWidthPrefix('app'));
+        ids.add(service.generateUniqueIdWidthPrefix('app'));
       }
-      // expect (ids.size).toBe(50); // ADD ESTA SENDO CONSIDERADO COMO ERRO
+      expect (ids.size).toBeTruthy(50);
   });
 
   it(`#${UniqueIdService.prototype.getNumberOfGeneratedUniqueIds.name}
@@ -31,7 +31,18 @@ describe(UniqueIdService.name, () => {
 
   it(`#${UniqueIdService.prototype.generateUniqueIdWidthPrefix.name}
     should throw when called with empty`, () => {
-      const emptyValues = [null, undefined, ''];
-      emptyValues.forEach(emptyValues)
+      const emptyValues = [null, undefined, '', '0', '1'];
+      emptyValues.forEach(emptyValue => {
+        expect(() => service.generateUniqueIdWidthPrefix(emptyValue))
+        .withContext(`Empty value: ${emptyValue }`)
+        .toThrow();
+
+        /*
+         expect(true).toBeTrue(); Aguarda valor primitivo literal
+         expect(true).toBe(true); Aguarda se os tipos literais são idênticos
+         expect(true).toBeTruthy(); Retorno mais genérico entre as opções
+        */
+
+      });
   });
 });
