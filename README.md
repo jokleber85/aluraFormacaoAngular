@@ -11,3 +11,5 @@ Angular: Controle o fluxo de navegação (12 horas)</br>
 Angular: Design de componentes com acessibilidade (10 horas)</br>
 
 Angular: Avançando no design de componentes com acessibilidade (10 horas)</br>
+
+Angular: Testes automatizados com Jasmine e Karma (14 horas)</br>
