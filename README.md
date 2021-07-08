@@ -11,5 +11,5 @@ npm install
 npm run all
 ng test
 npm run test-ci // versão headless
-
 ```
+</br>
